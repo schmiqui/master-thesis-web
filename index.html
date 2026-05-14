@@ -3,160 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Master Thesis — Research Hub</title>
+  <meta name="description" content="Master thesis: Hamiltonian constructions for (k,g)-graphs — aim, weekly progress, literature, and documents." />
+  <title>Master thesis — Hamiltonian (k,g)-graphs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="topbar">
-    <a href="#" class="topbar-brand">THESIS</a>
+    <a href="#intro" class="topbar-brand">Thesis</a>
     <nav class="topbar-nav" aria-label="Main">
-      <a href="#diary" class="topbar-link">Diary</a>
-      <a href="#assignment" class="topbar-link">Assignment</a>
-      <a href="#citations" class="topbar-link">Citations</a>
-      <a href="#glossary" class="topbar-link">Glossary</a>
-      <a href="#research-questions" class="topbar-link">Questions</a>
-      <a href="#timeline" class="topbar-link">Timeline</a>
-      <a href="#reading-list" class="topbar-link">Reading</a>
-      <a href="#ideas" class="topbar-link">Ideas</a>
-      <a href="#links" class="topbar-link">Links</a>
+      <a href="#intro" class="topbar-link">Intro</a>
+      <a href="#aim" class="topbar-link">Aim</a>
+      <a href="#progress" class="topbar-link">Progress</a>
+      <a href="#literature" class="topbar-link">Literature</a>
+      <a href="#documents" class="topbar-link">PDFs</a>
+      <a href="#contact" class="topbar-link">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section id="diary" class="band band--light section">
-      <div class="band-inner">
-        <span class="section-num">01</span>
-        <h2 class="section-title">Diary</h2>
-        <div class="diary-entries">
-          <article class="diary-entry">
-            <time class="diary-date" datetime="2025-02-20">20 Feb 2025</time>
-            <div class="diary-body"><p>Creating website for Master thesis.</p></div>
-          </article>
+  <main id="main">
+    <section id="intro" class="section section--hero section--alt" aria-labelledby="intro-heading">
+      <div class="wrap">
+        <p class="eyebrow">Master thesis</p>
+        <h1 id="intro-heading" class="hero-title">Constructions of Hamiltonian graphs with prescribed parameters</h1>
+        <p class="hero-lead" id="hero-author"></p>
+        <p class="hero-sub">Extremal graph theory, cages and record graphs, algorithms and experiments.</p>
+      </div>
+    </section>
+
+    <section id="aim" class="section section--prose" aria-labelledby="aim-heading">
+      <div class="wrap">
+        <h2 id="aim-heading" class="section-heading">Aim and motivation</h2>
+        <div class="prose">
+          <p>
+            Constructions of cages and record graphs, and the study of their properties, are a very active area in extremal graph theory.
+            For each pair of parameters <span class="math">(k, g)</span> there exist infinitely many <span class="math">(k, g)</span>-graphs.
+            The graph of smallest order <span class="math">n(k, g)</span> among them is a <strong>(k, g)-cage</strong>.
+            Cages are known only for few parameter pairs; proving that a given graph is a cage is computationally very hard.
+            The smallest known <span class="math">(k, g)</span>-graph not yet proven to be a cage is a <strong>record graph</strong> <span class="math">rec(k, g)</span>.
+            Sachs conjectured that for every <span class="math">k, g</span> there exists a Hamiltonian cage; understanding Hamiltonicity of cages and record graphs is therefore a natural and difficult problem.
+          </p>
+          <p>
+            <strong>Aim.</strong>
+            Develop graph constructions that, given a <span class="math">(k, g)</span>-graph, produce a Hamiltonian <span class="math">(k, g)</span>-graph,
+            with emphasis on smallest possible order or non-trivial upper bounds.
+            This requires designing and implementing construction algorithms and running substantial computational experiments to test graph properties.
+          </p>
+          <p>
+            <strong>Motivation.</strong>
+            The project sits between combinatorial construction theory and computational mathematics: conjectures and bounds drive the search for explicit graphs,
+            and good algorithms turn those searches into evidence and, ideally, into proofs or sharper bounds.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="assignment" class="band band--dark section">
-      <div class="band-inner">
-        <span class="section-num">02</span>
-        <h2 class="section-title">Assignment</h2>
-        <blockquote class="assignment-item">
-          <cite>Constructions of Hamiltonian graphs with prescribed parameters</cite>
-          <p class="assignment-quote">Constructions of cages and record graphs, as well as study of their properties,
-              is a very active area of research in extremal graph theory. For each pair of
-              parameters (k,g) there exists infinitely many
-              (k,g)-graphs. The graph of the smallest order, n(k,g), among these graphs is
-              called a (k,g)-cage. Cages are known only for few pairs of parameters. It is
-              computationally very difficult to prove that some (k,g)-graph is a cage. The
-              smallest known (k,g)-graph, that was not yet proven to be a cage is called
-              a record rec(k,g)-graph. Sachs in his work conjectured that for each pair of
-              parameters k,g, there exists a cage that is Hamiltonian. Therefore, investigating
-              the Hamiltonicity of cages and record graphs is interesting.</p>
-          <p class="assignment-note">The aim of the theses is to develop graph constructions that for any given
-              (k,g)-graph will return hamiltonian (k,g)-graph. We will be interested in such
-              graphs of smallest possible order, or at least in some upper bounds for orders
-              of such graphs. This will require to create and program clever algorithms for
-              graph constructions, and also run highly non-trivial computer experiments to
-              test graph properties.</p>
-        </blockquote>
+    <section id="progress" class="section section--alt" aria-labelledby="progress-heading">
+      <div class="wrap">
+        <h2 id="progress-heading" class="section-heading">Weekly progress</h2>
+        <p class="section-lead">A short changelog of what moved each week. Edit entries in <code>content/site-content.js</code>.</p>
+        <div id="progress-root" class="progress-root" aria-live="polite"></div>
       </div>
     </section>
 
-    <section id="citations" class="band band--light section">
-      <div class="band-inner">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Important papers</h2>
-        <p class="section-desc">Key citations and why they matter.</p>
-        <ul class="citations-list">
-          <li class="citation">
-            <span class="citation-ref">Author, A., & Author, B. (Year). <em>Title</em>. <em>Journal</em>, vol(issue), pp. <a href="#">DOI / URL</a></span>
-            <p class="citation-why">Why it matters: foundational definition / result you build on.</p>
-          </li>
-        </ul>
+    <section id="literature" class="section section--prose" aria-labelledby="literature-heading">
+      <div class="wrap">
+        <h2 id="literature-heading" class="section-heading">Literature</h2>
+        <p class="section-lead">Core references and how they support the thesis. List is generated from <code>content/site-content.js</code>.</p>
+        <div id="literature-root" class="literature-root" aria-live="polite"></div>
       </div>
     </section>
 
-    <section id="glossary" class="band band--dark section">
-      <div class="band-inner">
-        <span class="section-num">04</span>
-        <h2 class="section-title">Glossary</h2>
-        <p class="section-desc">Definitions of central terms.</p>
-        <dl class="glossary-list">
-          <dt>Term</dt>
-          <dd>Precise definition as used in your thesis.</dd>
-          <dt>Another term</dt>
-          <dd>Definition and optional reference (Author, Year).</dd>
-        </dl>
+    <section id="documents" class="section section--alt" aria-labelledby="documents-heading">
+      <div class="wrap">
+        <h2 id="documents-heading" class="section-heading">Documents (PDF)</h2>
+        <p class="section-lead">Place files under <code>public/thesis/</code> and update the <code>documents</code> array in the content file.</p>
+        <div id="documents-root" class="documents-root" aria-live="polite"></div>
       </div>
     </section>
 
-    <section id="research-questions" class="band band--light section">
-      <div class="band-inner">
-        <span class="section-num">05</span>
-        <h2 class="section-title">Research questions</h2>
-        <p class="section-desc">Central questions thesis addresses.</p>
-        <ol class="questions-list">
-          <li>How to modify graph to be hamiltonian?</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="timeline" class="band band--dark section">
-      <div class="band-inner">
-        <span class="section-num">06</span>
-        <h2 class="section-title">Timeline</h2>
-        <p class="section-desc">Milestones and deadlines.</p>
-        <ul class="timeline-list">
-          <li class="timeline-item"><span class="timeline-date">Mar 2025</span><span class="timeline-label">First draft Ch.1–3</span></li>
-          <li class="timeline-item"><span class="timeline-date">Apr 2025</span><span class="timeline-label">Revisions, internal review</span></li>
-          <li class="timeline-item"><span class="timeline-date">May 2025</span><span class="timeline-label">Submission</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="reading-list" class="band band--light section">
-      <div class="band-inner">
-        <span class="section-num">07</span>
-        <h2 class="section-title">Reading list</h2>
-        <p class="section-desc">To read / reading / read.</p>
-        <ul class="reading-list">
-          <li class="reading-item reading-done">Author (Year) — <em>Title</em> — Read</li>
-          <li class="reading-item reading-now">Author (Year) — <em>Title</em> — Reading</li>
-          <li class="reading-item reading-todo">Author (Year) — <em>Title</em> — To read</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="ideas" class="band band--dark section">
-      <div class="band-inner">
-        <span class="section-num">08</span>
-        <h2 class="section-title">Ideas & open questions</h2>
-        <p class="section-desc">Future directions, no commitment.</p>
-        <ul class="ideas-list">
-          <li>Idea or open question 1.</li>
-          <li>Idea or open question 2.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="links" class="band band--light section">
-      <div class="band-inner">
-        <span class="section-num">09</span>
-        <h2 class="section-title">Links & resources</h2>
-        <p class="section-desc">Git, paper versions, presentations.</p>
-        <ul class="links-list">
-          <li><a href="#">Repository (GitHub/GitLab)</a></li>
-          <li><a href="#">Paper — current version (PDF)</a></li>
-          <li><a href="#">Paper — v0.2 (PDF)</a></li>
-          <li><a href="#">Presentation — defence</a></li>
-          <li><a href="#">Overleaf / shared draft</a></li>
-        </ul>
+    <section id="contact" class="section section--prose section--contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <h2 id="contact-heading" class="section-heading">Contact and repository</h2>
+        <ul class="contact-list" id="contact-root"></ul>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <p class="footer-line" id="footer-meta"></p>
+      <p class="footer-line">
+        <a id="footer-github" class="footer-link" href="#">GitHub</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a id="footer-email" class="footer-link" href="#">Email</a>
+      </p>
+    </div>
+  </footer>
 
   <script type="module" src="scripts/main.js"></script>
 </body>
